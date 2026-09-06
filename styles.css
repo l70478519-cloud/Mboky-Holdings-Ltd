@@ -91,7 +91,9 @@ footer h3{margin:0 0 12px;color:white;text-transform:uppercase;font-family:"Barl
 footer>div{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
 footer a{transition:color .2s}
 footer a:hover{color:var(--orange)}
-.footer-brand img{width:330px;max-width:100%}
+.footer-brand{background:#fff;padding:18px;border-top:5px solid var(--orange);box-shadow:0 12px 30px #0005;align-self:start}
+.footer-brand img{width:100%;max-width:360px;filter:none}
+.footer-brand p{color:#465057!important}
 .footer-brand p,footer>div>p{max-width:310px;margin:8px 0 0;color:#8f989c;font-size:.88rem}
 .footer-socials{display:flex;flex-direction:row!important;gap:8px}
 .copyright{grid-column:1/-1;margin:12px 0 0;border-top:1px solid #ffffff20;padding-top:24px;font-size:.82rem;text-align:center}
