@@ -86,11 +86,18 @@ nav>a:not(.quote-nav):hover{color:var(--orange)}
 .contact label{display:grid;gap:6px;font-weight:700;font-size:.86rem}
 .contact input,.contact select,.contact textarea{width:100%;border:1px solid #ccd1d3;padding:12px;font:inherit}
 .contact textarea{resize:vertical}
-footer{background:#0b0e10;color:#b8bec1;padding:55px clamp(18px,6vw,94px) 25px;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px}
-footer>img{width:360px}
-footer h3{color:white;text-transform:uppercase;font-family:"Barlow Condensed"}
-footer div{display:flex;flex-direction:column;gap:6px}
-.copyright{grid-column:1/-1;border-top:1px solid #ffffff20;padding-top:22px;font-size:.82rem}
+footer{background:#0b0e10;color:#b8bec1;padding:55px clamp(18px,6vw,94px) 25px;display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:45px}
+footer h3{margin:0 0 12px;color:white;text-transform:uppercase;font-family:"Barlow Condensed";font-size:1.25rem}
+footer>div{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+footer a{transition:color .2s}
+footer a:hover{color:var(--orange)}
+.footer-brand img{width:330px;max-width:100%}
+.footer-brand p,footer>div>p{max-width:310px;margin:8px 0 0;color:#8f989c;font-size:.88rem}
+.footer-socials{display:flex;flex-direction:row!important;gap:8px}
+.copyright{grid-column:1/-1;margin:12px 0 0;border-top:1px solid #ffffff20;padding-top:24px;font-size:.82rem;text-align:center}
+.copyright a{color:white;font-weight:800}
+.copyright a:hover{color:var(--orange)}
+.copyright-separator{padding:0 7px;color:var(--orange)}
 .floating-wa{position:fixed;right:22px;bottom:22px;min-width:156px;height:56px;padding:0 19px;border-radius:30px;display:flex;align-items:center;justify-content:center;gap:9px;background:#25d366;color:white;font-weight:900;box-shadow:0 8px 24px #0004;z-index:30}
 .floating-wa span{font-size:1.15rem}
 .floating-wa:hover{transform:scale(1.07)}
@@ -126,6 +133,6 @@ nav a{padding:9px}
 .contact{grid-template-columns:1fr;padding:70px 18px}
 .contact form{padding:20px}
 footer{grid-template-columns:1fr}
-footer>img{width:100%;max-width:340px}
+.footer-brand img{width:100%;max-width:340px}
 .copyright{grid-column:auto}
 }
