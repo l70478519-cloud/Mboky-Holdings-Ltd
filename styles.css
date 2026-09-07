@@ -192,5 +192,5 @@ header{height:116px;border-bottom:3px solid var(--orange)}
   .logo{width:225px;height:74px}
   .logo img{filter:brightness(1.16) contrast(1.14)}
   .footer-brand img{max-width:100%}
-  .hero>img{object-position:center center}
+  .hero>img{object-position:62% center}
 }
