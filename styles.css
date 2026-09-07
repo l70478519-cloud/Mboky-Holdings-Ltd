@@ -206,3 +206,19 @@ header{height:116px;border-bottom:3px solid var(--orange)}
   .hero-installed{object-position:62% center}
   .hero-pile{object-position:48% center;border-left-width:3px}
 }
+
+
+/* Larger refined Mboky identity */
+header{height:126px}
+.logo{width:390px;height:110px}
+.logo img{filter:none}
+.footer-brand img{max-width:440px;filter:none}
+@media(min-width:761px) and (max-width:1100px){
+  .logo{width:310px;height:96px}
+  header{height:112px}
+}
+@media(max-width:760px){
+  header{height:96px}
+  .logo{width:245px;height:82px}
+  nav{top:96px}
+}
