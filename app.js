@@ -7,3 +7,22 @@ document.querySelectorAll('.product-wa').forEach(link=>{const message=`Hello Mbo
 document.querySelector('#quote-form').addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const message=`Hello Mboky Holdings, my name is ${data.get('name')}. My phone number is ${data.get('phone')}. I am interested in ${data.get('product')}. Details: ${data.get('details')||'Please share current prices and availability.'}`;window.open(`https://wa.me/254731780253?text=${encodeURIComponent(message)}`,'_blank','noopener')});
 
 const copyrightYear=document.querySelector('#copyright-year');if(copyrightYear)copyrightYear.textContent=String(new Date().getFullYear());
+
+
+document.querySelectorAll('.product-gallery').forEach(gallery=>{
+  const images=[...gallery.querySelectorAll('img')];
+  const count=gallery.querySelector('.gallery-count');
+  let current=0;
+  let touchStart=0;
+  const show=index=>{
+    current=(index+images.length)%images.length;
+    images.forEach((img,i)=>img.classList.toggle('active',i===current));
+    count.textContent=`${current+1} / ${images.length}`;
+  };
+  gallery.querySelector('.gallery-prev').addEventListener('click',event=>{event.stopPropagation();show(current-1)});
+  gallery.querySelector('.gallery-next').addEventListener('click',event=>{event.stopPropagation();show(current+1)});
+  gallery.addEventListener('click',event=>{if(!event.target.closest('button'))show(current+1)});
+  gallery.addEventListener('keydown',event=>{if(event.key==='ArrowLeft')show(current-1);if(event.key==='ArrowRight')show(current+1)});
+  gallery.addEventListener('touchstart',event=>{touchStart=event.changedTouches[0].clientX},{passive:true});
+  gallery.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-touchStart;if(Math.abs(distance)>35)show(current+(distance<0?1:-1))},{passive:true});
+});
