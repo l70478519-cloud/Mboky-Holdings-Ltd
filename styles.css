@@ -143,3 +143,13 @@ footer{grid-template-columns:1fr}
 /* Featured local bestseller */
 .products article{position:relative}
 .popular-badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--orange);color:#fff;padding:7px 10px;font-size:.72rem;font-weight:900;line-height:1;text-transform:uppercase;letter-spacing:.06em;box-shadow:0 5px 14px rgba(0,0,0,.25)}
+
+/* Two-photo product galleries */
+.product-gallery{position:relative;height:245px;overflow:hidden;background:#e8ebec;cursor:pointer}
+.product-gallery img{display:none;width:100%;height:100%;object-fit:cover}
+.product-gallery img.active{display:block}
+.gallery-prev,.gallery-next{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:rgba(16,20,22,.82);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.gallery-prev{left:10px}.gallery-next{right:10px}
+.gallery-prev:hover,.gallery-next:hover,.gallery-prev:focus-visible,.gallery-next:focus-visible{background:var(--orange);outline:2px solid #fff;outline-offset:2px}
+.gallery-count{position:absolute;right:12px;bottom:10px;background:rgba(16,20,22,.82);color:#fff;border-radius:20px;padding:5px 9px;font-size:.72rem;font-weight:800;letter-spacing:.04em}
+@media(max-width:700px){.product-gallery{height:230px}.gallery-prev,.gallery-next{width:42px;height:42px}}
